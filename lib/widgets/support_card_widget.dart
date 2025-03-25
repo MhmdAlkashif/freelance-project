@@ -20,23 +20,25 @@ class SupportCardWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsetsDirectional.only(
-                    top: 35.0,
-                    bottom: 35.0,
-                    start: 14.0,
-                  ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsetsDirectional.only(
+                      top: 35.0,
+                      bottom: 35.0,
+                      start: 14.0,
+                    ),
 
-                  child: Image.asset(
-                    "assets/images/smart_logo.png",
-                    width: 148,
-                    height: 79,
+                    child: Image.asset(
+                      "assets/images/smart_logo.png",
+                      width: 148,
+                      height: 79,
+                    ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsetsDirectional.only(
                     top: 12.0,
-                    bottom: 17.0,
+                    bottom: 35.0,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

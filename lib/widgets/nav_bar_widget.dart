@@ -69,11 +69,7 @@ class _NavBarWidgetState extends State<NavBarWidget> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-          padding: const EdgeInsets.only(
-            bottom: kBottomNavigationBarHeight,
-            right: 24,
-            left: 24,
-          ),
+          padding: const EdgeInsets.only(bottom: 30, right: 24, left: 24),
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,

@@ -18,7 +18,7 @@ class _PrintersDropdownWidgetState extends State<PrintersDropdownWidget> {
   TextEditingController searchController = TextEditingController();
 
   Widget _singleDropdownItem() {
-    return Row(
+    return Wrap(
       children: [
         Text(
           "150",

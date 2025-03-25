@@ -16,17 +16,20 @@ class AddMaterialsScreen extends StatefulWidget {
 class _HomeScreenState extends State<AddMaterialsScreen> {
   List<String> items = List.generate(5, (index) => "Item ${index + 1}");
 
-  int _counter = 1000;
+  final List<int> _counters = List.generate(
+    3,
+    (index) => 1000,
+  ); // Separate counter for each item
 
-  void _increment() {
+  void _increment(int index) {
     setState(() {
-      _counter++;
+      _counters[index]++;
     });
   }
 
-  void _decrement() {
+  void _decrement(int index) {
     setState(() {
-      if (_counter > 0) _counter--;
+      if (_counters[index] > 0) _counters[index]--;
     });
   }
 
@@ -69,25 +72,28 @@ class _HomeScreenState extends State<AddMaterialsScreen> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          ListView.builder(
-            shrinkWrap: true,
-            itemCount: 3,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 8,
-                  horizontal: 16,
-                ),
-                child: _slidableWidget(index),
-              );
-            },
-          ),
-          DottedBtnWidget(),
-          const Spacer(),
-          _buttonsWidget(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ListView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: 3,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 8,
+                    horizontal: 16,
+                  ),
+                  child: _slidableWidget(index),
+                );
+              },
+            ),
+            DottedBtnWidget(),
+
+            _buttonsWidget(),
+          ],
+        ),
       ),
     );
   }
@@ -208,7 +214,7 @@ class _HomeScreenState extends State<AddMaterialsScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         GestureDetector(
-                          onTap: _increment,
+                          onTap: () => _increment(index),
                           child: Container(
                             width: 24,
                             height: 24,
@@ -222,10 +228,10 @@ class _HomeScreenState extends State<AddMaterialsScreen> {
 
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 12),
-                          child: Text(_counter.toString()),
+                          child: Text(_counters[index].toString()),
                         ),
                         GestureDetector(
-                          onTap: _decrement,
+                          onTap: () => _decrement(index),
                           child: Container(
                             width: 24,
                             height: 24,
@@ -308,7 +314,7 @@ class _HomeScreenState extends State<AddMaterialsScreen> {
 
   Widget _buttonsWidget() {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 40.0),
+      padding: const EdgeInsets.only(top: 60, bottom: 40.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
