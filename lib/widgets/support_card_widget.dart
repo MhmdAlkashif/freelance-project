@@ -38,7 +38,7 @@ class SupportCardWidget extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsetsDirectional.only(
                     top: 12.0,
-                    bottom: 35.0,
+                    bottom: 17.0,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

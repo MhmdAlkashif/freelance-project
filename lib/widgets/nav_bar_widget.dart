@@ -76,9 +76,9 @@ class _NavBarWidgetState extends State<NavBarWidget> {
               borderRadius: BorderRadius.circular(12),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.2), // Light shadow
-                  blurRadius: 5, // Soft blur
-                  offset: Offset(0, 3), // Shadow position
+                  color: Colors.black.withOpacity(0.2),
+                  blurRadius: 5,
+                  offset: Offset(0, 3), 
                 ),
               ],
             ),

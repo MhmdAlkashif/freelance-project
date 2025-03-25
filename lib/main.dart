@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,11 +20,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       supportedLocales: [
-        Locale('ar', ''), // Arabic
+        Locale('ar', ''),
         Locale(
           'en',
           '',
-        ), // English (optional, if you plan to support multiple languages)
+        ), 
       ],
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,

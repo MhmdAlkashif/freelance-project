@@ -19,7 +19,7 @@ class _HomeScreenState extends State<AddMaterialsScreen> {
   final List<int> _counters = List.generate(
     3,
     (index) => 1000,
-  ); // Separate counter for each item
+  );
 
   void _increment(int index) {
     setState(() {
@@ -356,7 +356,7 @@ class _HomeScreenState extends State<AddMaterialsScreen> {
             ),
           ),
 
-          // Spacing between buttons
+  
         ],
       ),
     );

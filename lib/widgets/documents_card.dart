@@ -47,9 +47,9 @@ class DocumentsCard extends StatelessWidget {
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.1), // Light shadow
-                  blurRadius: 5, // Soft blur
-                  offset: Offset(0, 3), // Shadow position
+                  color: Colors.black.withOpacity(0.1),
+                  blurRadius: 5, 
+                  offset: Offset(0, 3),
                 ),
               ],
             ),

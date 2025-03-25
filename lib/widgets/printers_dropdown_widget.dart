@@ -31,7 +31,7 @@ class _PrintersDropdownWidgetState extends State<PrintersDropdownWidget> {
             style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
           ),
         ),
-        const Spacer(),
+
         Text(
           "450.000 د.ع",
           style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
